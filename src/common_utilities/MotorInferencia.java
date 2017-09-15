@@ -122,14 +122,15 @@ public class MotorInferencia {
 		String decision = in.readLine();
 		if(decision.equalsIgnoreCase("si")){
 			aprendiendo = true;
-			System.out.println("Dime cuál es la paalabra clave"
+			System.out.println("Dime cuál es la palabra clave"
 					+ "de lo que me vas a enseñar:");
 			String palClave = in.readLine();
 			System.out.println("ok ahora dime en consiste o con"
-					+ " que se realaciona");
+					+ " que se relaciona");
 			String conceptos = in.readLine();
 			ManipuladorDArchivos mani = new ManipuladorDArchivos();
 			mani.escribir(archivo, palClave, conceptos);
+			System.out.println("¡Aprendido!");
 		}
 		if(decision.equalsIgnoreCase("no") && !aprendiendo){
 			System.out.println("ok no hay problema");
